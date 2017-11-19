@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+        body{background: skyblue; font-family: verdana; color: #fff; padding: 30px; }
+        h1{font-size: 58px; text-transform: uppercase; letter-spacing: 2px; text-align: center;}
+        p{font-size: 16px; text-align: center;}
+        </style>
+    </head>
+    <body>
+        <% include partials/nav.ejs %>
+        <h1>Contact Us</h1>
+        <p>Thanks for getting in touch!!!</p>
+
+        <!-- When POST request is successfully executed, rendering new page and showing the data with ejs tags <%= %> -->
+
+        <p>Your request to connect with <%= data.who %> from department <%= data.department %> has been forwarded.</p>
+        <p>We will contact you at <%= data.email%> </p>
+    </body>
+</html>
