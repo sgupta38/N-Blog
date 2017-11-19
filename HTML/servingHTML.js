@@ -7,6 +7,7 @@ var fs = require('fs');
 var server = http.createServer(function(req, res){
 
     // We are responding with plain text.
+    console.log('request received is: ' + req.url);
     res.writeHead(200, {'Content-Type' : 'text/html'});
 
     var myReadStream = fs.createReadStream(__dirname + '/index.html');
