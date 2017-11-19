@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+        body{background: skyblue; font-family: verdana; color: #fff; padding: 30px;}
+        h1{font-size: 68px; text-transform: uppercase; letter-spacing: 2px; text-align: center;}
+        h2{font-size: 58px; text-transform: uppercase; letter-spacing: 2px; text-align: center;}
+        p,li{font-size: 16px; text-align: center;}
+        </style>
+    </head>
+    <body>
+        <!--   Here, as we we are outputting data directly, "<%= %>" is used -->
+        <h1>Winter is coming... <%= person %></h1>
+        <p> <strong>Location: </strong><%= data.location%> </p>
+        <p> <strong>Age: </strong> <%= data.age%></p>
+        <h2> Hobbies: </h2>
+        <ul>
+            <!--   Here, since we are displaying list using JavaScript code, we are using "<% %>". Notice that no "=" sign. -->
+
+            <%  data.hobbies.forEach(function(item){ %>
+                <li><%= item%></li>
+            <% }); %>
+        </ul>
+    </body>
+</html>
